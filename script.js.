@@ -1,0 +1,27 @@
+
+const imagesInput = document.getElementById("images");
+const audioInput = document.getElementById("audio");
+const generateButton = document.getElementById("generate");
+const statusText = document.getElementById("status");
+
+generateButton.addEventListener("click", () => {
+  const images = imagesInput.files;
+  const audio = audioInput.files;
+
+  if (images.length === 0) {
+    statusText.textContent = "Adicione as imagens das cenas primeiro.";
+    return;
+  }
+
+  if (audio.length === 0) {
+    statusText.textContent = "Adicione a narração do vídeo.";
+    return;
+  }
+
+  statusText.textContent =
+    `${images.length} imagens e narração carregadas!`;
+
+  alert(
+    "Materiais recebidos! A próxima etapa será implementar a montagem automática."
+  );
+});
