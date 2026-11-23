@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit Stories Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🍓 Fruit Stories</h1>
+    <p>Seu editor automático de vídeos</p>
+  </header>
+
+  <main>
+    <section class="upload">
+      <h2>Adicionar materiais</h2>
+      <label for="images">Imagens das cenas</label>
+      <input type="file" id="images" accept="image/*" multiple>
+
+      <label for="audio">Narração do vídeo</label>
+      <input type="file" id="audio" accept="audio/*">
+    </section>
+
+    <section>
+      <h2>Configurações</h2>
+      <label for="format">Formato</label>
+      <select id="format">
+        <option value="9:16">Vertical 9:16</option>
+      </select>
+
+      <label for="subtitles">Legendas</label>
+      <select id="subtitles">
+        <option value="yes">Ativadas</option>
+        <option value="no">Desativadas</option>
+      </select>
+    </section>
+
+    <button id="generate">Preparar vídeo</button>
+    <p id="status">Aguardando seus arquivos...</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
